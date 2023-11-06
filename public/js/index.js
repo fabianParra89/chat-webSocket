@@ -7,11 +7,11 @@
         .addEventListener('submit', (event)=>{
             event.preventDefault();
             const input = document.getElementById('input-messages');
-            const newMessages = {
+            const newMessage = {
                 username,
                 body: input.value,
             }
-            socket.emit('new-messages', newMessages)
+            socket.emit('new-message', newMessage)
             input.value = '';
             input.focus();
         })
